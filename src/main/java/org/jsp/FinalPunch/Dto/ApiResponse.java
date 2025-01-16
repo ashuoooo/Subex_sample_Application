@@ -10,7 +10,11 @@ public class ApiResponse<T> {
     public ApiResponse() {
     }
 
+<<<<<<< HEAD
     // Constructor for successful responses
+=======
+    // Constructor for successful responses is done
+>>>>>>> origin/master
     public ApiResponse(T body, String description) {
         this.body = body;
         this.description = description;
