@@ -1,0 +1,30 @@
+#version: '3.8'
+#
+#services:
+#  finalpunch-app:
+#    image: finalpunch-app:latest
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+#    container_name: finalpunch-app
+#    ports:
+#      - "8080:8080"
+#    environment:
+#      - SPRING_PROFILES_ACTIVE=prod
+#      - SPRING_DATASOURCE_URL=jdbc:h2:mem:testdb
+#      - SPRING_DATASOURCE_DRIVER_CLASSNAME=org.h2.Driver
+#      - SPRING_DATASOURCE_USERNAME=sa
+#      - SPRING_DATASOURCE_PASSWORD=
+#      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+#      - SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.H2Dialect
+#    volumes:
+#      - ./target:/app
+#
+#  h2-database:
+#    image: h2database/h2
+#    container_name: h2-database
+#    ports:
+#      - "8082:8082"  # Access the H2 console
+#    environment:
+#      - H2_OPTIONS=-web -webAllowOthers -tcp -tcpAllowOthers -ifNotExists
+#    restart: always
